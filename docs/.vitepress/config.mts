@@ -56,20 +56,21 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '大语言模型', link: '/docs/llm' }
+      { text: '大语言模型', link: '/llm' }
     ],
 
     sidebar: [
       {
         text: 'AI 技术',
         items: [
-          { text: '大语言模型 LLM', link: '/docs/llm' }
+          { text: '大语言模型 LLM', link: '/llm' }
         ]
       },
       {
         text: 'Examples',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' }
+          { text: 'Markdown Examples', link: '/markdown-examples' },
+          { text: 'Runtime API Examples', link: '/api-examples' }
         ]
       }
     ],

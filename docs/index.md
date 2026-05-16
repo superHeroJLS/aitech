@@ -9,10 +9,10 @@ hero:
   actions:
     - theme: brand
       text: LLM
-      link: /docs/llm
+      link: /llm
     - theme: alt
       text: LLM
-      link: /docs/llm
+      link: /llm
 
 features:
   - title: 大语言模型
