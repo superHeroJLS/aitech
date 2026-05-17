@@ -1,0 +1,35 @@
+name: Deploy VitePress to OSS
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build VitePress
+        run: npm run docs:build
+
+      - name: Install ossutil
+        uses: manyuanrong/setup-ossutil@v3.0
+        with:
+          endpoint: oss-cn-hangzhou.aliyuncs.com
+          access-key-id: ${{ secrets.ALIYUN_ACCESS_KEY }}
+          access-key-secret: ${{ secrets.ALIYUN_ACCESS_SECRET }}
+
+      - name: Upload files to OSS
+        run: ossutil cp -rf docs/.vitepress/dist oss://aitech-blog
