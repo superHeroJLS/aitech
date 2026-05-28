@@ -23,3 +23,5 @@ features:
     details: 提示工程、RAG 部署与安全合规等实用指南
 ---
 
+<a href="https://beian.miit.gov.cn/" target="_blank">赣ICP备2026011221号-1</a>
+
