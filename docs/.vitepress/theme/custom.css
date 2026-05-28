@@ -1,0 +1,26 @@
+.beian-footer {
+  position: fixed;
+  right: 24px;
+  bottom: 16px;
+  z-index: 50;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.beian-footer a {
+  color: var(--vp-c-text-2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.beian-footer a:hover {
+  color: var(--vp-c-brand-1);
+}
+
+@media (max-width: 768px) {
+  .beian-footer {
+    right: 16px;
+    bottom: 12px;
+    font-size: 11px;
+  }
+}
